@@ -145,29 +145,28 @@ const FAQSection = () => {
       </div>
 
       {/* Full Screen Closing Section */}
-      <div className="w-full mt-16">
+      <div className="w-full mt-16 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative py-16 text-center text-white overflow-hidden"
+          className="relative py-16 text-center text-white"
           style={{
             backgroundImage: `url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed'
+            backgroundPosition: 'center'
           }}
         >
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/50"></div>
           
           {/* Content */}
-          <div className="relative z-10 px-6 max-w-4xl mx-auto text-center pt-8">
+          <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-8">
             <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 font-spectral leading-tight">
               Together, we create opportunities, build careers, and shape a brighter future.
             </h4>
-            <p className="mb-6 text-base md:text-lg max-w-2xl mx-auto font-spectral leading-relaxed opacity-95">
+            <p className="mb-6 text-base md:text-lg max-w-3xl mx-auto font-spectral leading-relaxed opacity-95">
               Ready to start your transformation journey with AspiraSys?
             </p>
             <motion.button
