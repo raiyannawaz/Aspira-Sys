@@ -155,7 +155,8 @@ const FAQSection = () => {
           style={{
             backgroundImage: `url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
           }}
         >
           {/* Dark overlay for better text readability */}

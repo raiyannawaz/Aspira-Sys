@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
 import OffersSection from './components/sections/OffersSection';
 import AboutUsSection from './components/sections/AboutUsSection';
@@ -19,6 +20,7 @@ function App() {
         <ExploreEcosystem />
         <FAQSection />
       </main>
+      <Footer />
     </div>
   );
 }
