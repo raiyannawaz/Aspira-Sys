@@ -74,7 +74,7 @@ const ExploreEcosystem = () => {
 
       {/* Main Icon */}
       <div className="relative z-10 mb-6">
-        <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+        <div className="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
           <item.icon className="w-8 h-8 text-white" />
         </div>
       </div>
@@ -94,7 +94,7 @@ const ExploreEcosystem = () => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className={`w-full bg-gradient-to-r ${item.color} ${item.hoverColor} text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group`}
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
         >
           <span>{item.buttonText}</span>
           <motion.div
@@ -112,7 +112,7 @@ const ExploreEcosystem = () => {
   );
 
   return (
-    <section id="ecosystem" className="py-20 bg-white">
+    <section id="ecosystem" className="py-20 bg-white scroll-mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -180,35 +180,45 @@ const ExploreEcosystem = () => {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
+      </div>
+      
+      {/* Full Width Fixed Background Call to Action */}
+      <div className="relative mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-16 text-center"
+          className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-fixed bg-cover bg-center bg-no-repeat min-h-[350px] flex items-center justify-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80')"
+          }}
         >
-          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h4 className="text-2xl font-bold mb-4">Ready to Join Our Ecosystem?</h4>
-            <p className="mb-6 opacity-90 max-w-2xl mx-auto">
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/70"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-spectral">Ready to Join Our Ecosystem?</h4>
+            <p className="mb-8 text-lg md:text-xl max-w-3xl mx-auto font-spectral leading-relaxed">
               Become part of a thriving community where learning never stops, opportunities abound, 
               and your career growth is our priority.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-slate-700 hover:text-slate-900 font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-white text-slate-800 hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-spectral text-lg"
               >
                 Start Your Journey
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/30 hover:border-white/50 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 flex items-center justify-center space-x-2"
+                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/20 font-semibold px-10 py-4 rounded-full transition-all duration-300 flex items-center justify-center space-x-3 font-spectral text-lg backdrop-blur-sm"
               >
                 <span>Contact Us</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </motion.button>
             </div>
           </div>

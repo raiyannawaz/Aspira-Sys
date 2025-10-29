@@ -63,8 +63,9 @@ export default {
         ring: '#0284c7'
       },
       fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-        'heading': ['Poppins', 'ui-sans-serif', 'system-ui'],
+        'sans': ['Spectral', 'serif'],
+        'spectral': ['Spectral', 'serif'],
+        'heading': ['Spectral', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

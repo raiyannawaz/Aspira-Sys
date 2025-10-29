@@ -25,6 +25,17 @@ const HeroSection = () => {
     });
   };
 
+  // Scroll to section function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const stats = [
     { icon: Award, label: 'Careers Launched', value: '100+', color: 'text-green-500' },
     { icon: Users, label: 'Current Ongoing Interns', value: '1000+', color: 'text-red-500' },
@@ -48,7 +59,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-blue-100 overflow-hidden">
+    <div id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-blue-100 overflow-hidden scroll-mt-8">
       
       {/* Particles Background Animation */}
       <div className="absolute inset-0 z-10">
@@ -97,7 +108,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight"
+                  className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-spectral"
                 >
                   <div className="mb-2">
                     Empowering IT Aspirants.
@@ -113,7 +124,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl lg:mx-0 mx-auto"
+                  className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl lg:mx-0 mx-auto font-spectral"
                 >
                   Join our mission to equip IT aspirants with AI-enhanced skills, 
                   real-world projects, and career-launching internships.
@@ -132,12 +143,21 @@ const HeroSection = () => {
                     key={button.text}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      if (button.text === 'Explore Internships') {
+                        scrollToSection('internship-programs');
+                      } else if (button.text === 'View Intern Projects') {
+                        scrollToSection('explore-ecosystem');
+                      } else if (button.text === 'Hire From Us') {
+                        scrollToSection('about-us');
+                      }
+                    }}
                     className={`
                       ${button.primary 
-                        ? 'bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:from-indigo-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-lg' 
+                        ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg' 
                         : 'border-2 border-gray-300 hover:border-indigo-400 hover:text-indigo-600 text-gray-700 bg-white'
                       }
-                      px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2
+                      px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 cursor-pointer
                     `}
                   >
                     <span>{button.text}</span>
@@ -168,7 +188,7 @@ const HeroSection = () => {
                   >
                     {/* Content Overlay */}
                     {/* <div className="relative z-10 text-center space-y-3 bg-white/95 backdrop-blur-sm rounded-lg p-6 border border-white/60 shadow-lg">
-                      <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-full mx-auto flex items-center justify-center shadow-md">
+                      <div className="w-12 h-12 bg-indigo-600 rounded-full mx-auto flex items-center justify-center shadow-md">
                         <Building2 className="w-6 h-6 text-white" />
                       </div>
                       <div className="space-y-1">
@@ -326,8 +346,8 @@ const HeroSection = () => {
                       <stat.icon className={`w-6 h-6 ${stat.color}`} />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-lg md:text-xl font-bold text-gray-900">{stat.value}</p>
-                      <p className="text-xs text-gray-600 font-medium">{stat.label}</p>
+                      <p className="text-lg md:text-xl font-bold text-gray-900 font-spectral">{stat.value}</p>
+                      <p className="text-xs text-gray-600 font-medium font-spectral">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}
