@@ -32,7 +32,7 @@ const Navbar = () => {
       className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -42,7 +42,7 @@ const Navbar = () => {
             <img 
               src={aspiraLogo} 
               alt="AspiraSys Logo" 
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
           </motion.div>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.sectionId)}
-                  className="px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-spectral"
+                  className="px-3 py-2 rounded-md text-base font-medium transition-all duration-200 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-spectral"
                 >
                   {item.name}
                 </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2 rounded-full transition-all duration-300 shadow-lg font-spectral"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-8 py-2.5 rounded-full transition-all duration-300 shadow-lg font-spectral text-md"
             >
               Contact
             </motion.button>
