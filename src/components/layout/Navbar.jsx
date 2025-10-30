@@ -53,7 +53,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.sectionId)}
-                  className="px-3 py-2 rounded-md text-base font-medium transition-all duration-200 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-spectral"
+                  className="px-3 py-2 rounded-md text-base font-medium transition-all duration-200 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-body"
                 >
                   {item.name}
                 </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-8 py-2.5 rounded-full transition-all duration-300 shadow-lg font-spectral text-md"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-8 py-2.5 rounded-full transition-all duration-300 shadow-lg font-button text-md"
             >
               Contact
             </motion.button>
@@ -91,14 +91,14 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200 font-spectral"
+            className="md:hidden bg-white border-t border-gray-200 font-body"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.sectionId)}
-                  className="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-700 hover:text-indigo-600 hover:bg-gray-50 font-spectral"
+                  className="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-700 hover:text-indigo-600 hover:bg-gray-50 font-body"
                 >
                   {item.name}
                 </button>
@@ -106,7 +106,7 @@ const Navbar = () => {
               
               {/* Mobile Contact Button */}
               <div className="pt-4">
-                <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-full font-spectral">
+                <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-full font-button">
                   Contact
                 </button>
               </div>

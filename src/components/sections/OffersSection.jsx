@@ -78,7 +78,7 @@ const OffersSection = () => {
           transition={{ duration: 0.8 }}
           className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center font-spectral">What AspiraSys Offers</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center font-title">What AspiraSys Offers</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {offers.map((offer, index) => (
               <motion.div
@@ -90,7 +90,7 @@ const OffersSection = () => {
                 className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <offer.icon className={`w-5 h-5 ${offer.color} mt-0.5 flex-shrink-0`} />
-                <p className="text-gray-700 text-sm font-spectral">{offer.text}</p>
+                <p className="text-gray-700 text-sm font-body">{offer.text}</p>
               </motion.div>
             ))}
           </div>

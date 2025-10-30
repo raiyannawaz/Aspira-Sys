@@ -83,10 +83,10 @@ const FAQSection = () => {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
               <HelpCircle className="w-8 h-8 text-blue-600" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-spectral">FAQ</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-title">FAQ</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 font-spectral">
+          <p className="text-lg text-gray-600 font-body">
             Common questions about our programs and approach
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ const FAQSection = () => {
                   <div className={`w-10 h-10 ${faq.iconBg} rounded-full flex items-center justify-center mr-4`}>
                     <faq.icon className={`w-5 h-5 ${faq.iconColor}`} />
                   </div>
-                  <span className="font-semibold text-gray-900 font-spectral text-lg">{faq.question}</span>
+                  <span className="font-semibold text-gray-900 font-title text-lg">{faq.question}</span>
                 </div>
                 <motion.div
                   animate={{ rotate: openFAQ === index ? 180 : 0 }}
@@ -134,7 +134,7 @@ const FAQSection = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6 ml-14">
-                      <p className="text-gray-600 leading-relaxed font-spectral">{faq.answer}</p>
+                      <p className="text-gray-600 leading-relaxed font-body">{faq.answer}</p>
                     </div>
                   </motion.div>
                 )}
@@ -164,16 +164,16 @@ const FAQSection = () => {
           
           {/* Content */}
           <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-8">
-            <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 font-spectral leading-tight">
+            <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 font-title leading-tight">
               Together, we create opportunities, build careers, and shape a brighter future.
             </h4>
-            <p className="mb-6 text-base md:text-lg max-w-3xl mx-auto font-spectral leading-relaxed opacity-95">
+            <p className="mb-6 text-base md:text-lg max-w-3xl mx-auto font-body leading-relaxed opacity-95">
               Ready to start your transformation journey with AspiraSys?
             </p>
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-indigo-700 hover:text-indigo-900 font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-spectral text-sm"
+              className="bg-white text-indigo-700 hover:text-indigo-900 font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-button text-sm"
             >
               Get Started Today
             </motion.button>

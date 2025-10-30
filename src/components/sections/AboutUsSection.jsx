@@ -61,7 +61,7 @@ const AboutUsSection = () => {
         >
           <div className="flex items-center justify-center mb-4">
             <BookOpen className="w-8 h-8 text-slate-600 mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-title">About Us</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-slate-400 via-gray-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
@@ -82,9 +82,9 @@ const AboutUsSection = () => {
                 <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-4">
                   <BookOpen className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Who We Are</h3>
+                <h3 className="text-xl font-bold text-gray-900 font-title">Who We Are</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed font-spectral text-sm">
+              <p className="text-gray-600 leading-relaxed font-body text-sm">
                 AspiraSys is a Not-For-Profit Organization dedicated to empowering IT 
                 aspirants with job-ready skills. We combine industry expertise with 
                 innovative AI-enhanced learning to create a transformative educational 
@@ -104,9 +104,9 @@ const AboutUsSection = () => {
                 <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mr-4">
                   <Target className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Our Vision</h3>
+                <h3 className="text-xl font-bold text-gray-900 font-title">Our Vision</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed font-spectral text-sm">
+              <p className="text-gray-600 leading-relaxed font-body text-sm">
                 To be the leading platform that transforms IT aspirants into industry-ready 
                 professionals, bridging the gap between academic knowledge and real-world application.
               </p>
@@ -124,9 +124,9 @@ const AboutUsSection = () => {
                 <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center mr-4">
                   <Heart className="w-6 h-6 text-pink-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Our Motivation</h3>
+                <h3 className="text-xl font-bold text-gray-900 font-title">Our Motivation</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed font-spectral text-sm">
+              <p className="text-gray-600 leading-relaxed font-body text-sm">
                 We believe everyone deserves access to quality tech education. Our 
                 not-for-profit model ensures that financial barriers never stand 
                 between talent and opportunity.
@@ -149,9 +149,9 @@ const AboutUsSection = () => {
                   <div className={`w-12 h-12 ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2 font-spectral">{feature.title}</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2 font-title">{feature.title}</h4>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed font-spectral">{feature.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed font-body">{feature.description}</p>
               </motion.div>
             ))}
           </div>

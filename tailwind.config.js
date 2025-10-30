@@ -63,9 +63,14 @@ export default {
         ring: '#0284c7'
       },
       fontFamily: {
-        'sans': ['Spectral', 'serif'],
+        'sans': ['Open Sans', 'sans-serif'],
         'spectral': ['Spectral', 'serif'],
-        'heading': ['Spectral', 'serif'],
+        'delius': ['Delius', 'cursive'],
+        'opensans': ['Open Sans', 'sans-serif'],
+        'quicksand': ['Quicksand', 'sans-serif'],
+        'title': ['Delius', 'cursive'],
+        'body': ['Open Sans', 'sans-serif'],
+        'button': ['Quicksand', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

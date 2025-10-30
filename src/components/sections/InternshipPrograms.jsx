@@ -113,10 +113,10 @@ const InternshipPrograms = () => {
 
       {/* Content */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-gray-900 leading-tight font-spectral">
+        <h3 className="text-lg font-bold text-gray-900 leading-tight font-title">
           {program.title}
         </h3>
-        <p className="text-gray-600 text-sm leading-relaxed font-spectral">
+        <p className="text-gray-600 text-sm leading-relaxed font-body">
           {program.description}
         </p>
       </div>
@@ -129,7 +129,7 @@ const InternshipPrograms = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-md"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-md font-button"
         >
           Apply Now
         </motion.button>
@@ -150,10 +150,10 @@ const InternshipPrograms = () => {
         >
           <div className="flex items-center mb-4 justify-center">
             <GraduationCap className="w-8 h-8 text-slate-600 mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-spectral">Internship Programs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-title">Internship Programs</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-slate-400 via-gray-500 to-blue-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-spectral">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-body">
             Choose from our intensive 1-month tracks or comprehensive 4-month deep-dive programs, 
             all enhanced with cutting-edge AI tools and real-world project experience.
           </p>
@@ -169,7 +169,7 @@ const InternshipPrograms = () => {
             className="flex items-center mb-8"
           >
             <Calendar className="w-6 h-6 text-green-600 mr-3" />
-            <h3 className="text-2xl font-bold text-gray-900 font-spectral">1-Month Intensive Tracks</h3>
+            <h3 className="text-2xl font-bold text-gray-900 font-title">1-Month Intensive Tracks</h3>
             <div className="ml-4 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
               Quick Start
             </div>
@@ -198,7 +198,7 @@ const InternshipPrograms = () => {
             className="flex items-center mb-8"
           >
             <Calendar className="w-6 h-6 text-purple-600 mr-3" />
-            <h3 className="text-2xl font-bold text-gray-900 font-spectral">4-Month Deep-Dive Internships</h3>
+            <h3 className="text-2xl font-bold text-gray-900 font-title">4-Month Deep-Dive Internships</h3>
             <div className="ml-4 bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
               Comprehensive
             </div>

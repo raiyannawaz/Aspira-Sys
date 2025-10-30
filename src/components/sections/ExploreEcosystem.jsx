@@ -81,10 +81,10 @@ const ExploreEcosystem = () => {
 
       {/* Content */}
       <div className="relative z-10 space-y-4">
-        <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors font-title">
           {item.title}
         </h3>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed font-body">
           {item.description}
         </p>
       </div>
@@ -94,7 +94,7 @@ const ExploreEcosystem = () => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group font-button"
         >
           <span>{item.buttonText}</span>
           <motion.div
@@ -124,10 +124,10 @@ const ExploreEcosystem = () => {
         >
           <div className="flex items-center justify-center mb-4">
             <Rocket className="w-8 h-8 text-slate-600 mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Explore Our Ecosystem</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-title">Explore Our Ecosystem</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-slate-400 via-gray-500 to-blue-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-body">
             Discover the comprehensive resources, projects, and opportunities that make AspiraSys 
             more than just an internship program — it's a complete career development ecosystem.
           </p>
@@ -149,8 +149,8 @@ const ExploreEcosystem = () => {
           className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl p-8 border border-gray-100"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Our Impact in Numbers</h3>
-            <p className="text-gray-600">Real results from our comprehensive ecosystem</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 font-title">Our Impact in Numbers</h3>
+            <p className="text-gray-600 font-body">Real results from our comprehensive ecosystem</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -172,8 +172,8 @@ const ExploreEcosystem = () => {
                   <stat.icon className="w-6 h-6 text-slate-600" />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-2xl font-bold text-gray-900">{stat.number}</p>
-                  <p className="text-sm text-gray-600 font-medium">{stat.label}</p>
+                  <p className="text-2xl font-bold text-gray-900 font-title">{stat.number}</p>
+                  <p className="text-sm text-gray-600 font-medium font-body">{stat.label}</p>
                 </div>
               </motion.div>
             ))}
@@ -199,8 +199,8 @@ const ExploreEcosystem = () => {
           
           {/* Content */}
           <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
-            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-spectral">Ready to Join Our Ecosystem?</h4>
-            <p className="mb-8 text-lg md:text-xl max-w-3xl mx-auto font-spectral leading-relaxed">
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-title">Ready to Join Our Ecosystem?</h4>
+            <p className="mb-8 text-lg md:text-xl max-w-3xl mx-auto font-body leading-relaxed">
               Become part of a thriving community where learning never stops, opportunities abound, 
               and your career growth is our priority.
             </p>
@@ -208,14 +208,14 @@ const ExploreEcosystem = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-slate-800 hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-spectral text-lg"
+                className="bg-white text-slate-800 hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-button text-lg"
               >
                 Start Your Journey
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/20 font-semibold px-10 py-4 rounded-full transition-all duration-300 flex items-center justify-center space-x-3 font-spectral text-lg backdrop-blur-sm"
+                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/20 font-semibold px-10 py-4 rounded-full transition-all duration-300 flex items-center justify-center space-x-3 font-button text-lg backdrop-blur-sm"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />

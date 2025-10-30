@@ -10,7 +10,7 @@ import FAQSection from './components/sections/FAQSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-spectral overflow-x-hidden">
+    <div className="min-h-screen bg-white font-body overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />

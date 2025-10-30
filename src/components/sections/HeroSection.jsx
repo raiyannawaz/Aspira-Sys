@@ -108,7 +108,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-spectral"
+                  className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-title"
                 >
                   <div className="mb-2">
                     Empowering IT Aspirants.
@@ -124,7 +124,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl lg:mx-0 mx-auto font-spectral"
+                  className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl lg:mx-0 mx-auto font-body"
                 >
                   Join our mission to equip IT aspirants with AI-enhanced skills, 
                   real-world projects, and career-launching internships.
@@ -157,7 +157,7 @@ const HeroSection = () => {
                         ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg' 
                         : 'border-2 border-gray-300 hover:border-indigo-400 hover:text-indigo-600 text-gray-700 bg-white'
                       }
-                      px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 cursor-pointer
+                      px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 cursor-pointer font-button
                     `}
                   >
                     <span>{button.text}</span>
@@ -346,8 +346,8 @@ const HeroSection = () => {
                       <stat.icon className={`w-6 h-6 ${stat.color}`} />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-lg md:text-xl font-bold text-gray-900 font-spectral">{stat.value}</p>
-                      <p className="text-xs text-gray-600 font-medium font-spectral">{stat.label}</p>
+                      <p className="text-lg md:text-xl font-bold text-gray-900 font-title">{stat.value}</p>
+                      <p className="text-xs text-gray-600 font-medium font-body">{stat.label}</p>
                     </div>
                   </motion.div>
                 ))}

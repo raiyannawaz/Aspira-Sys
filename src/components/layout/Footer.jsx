@@ -51,25 +51,25 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-blue-600 mb-4 font-spectral">
+              <h3 className="text-2xl font-bold text-blue-600 mb-4 font-title">
                 AspiraSys
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed font-spectral">
+              <p className="text-gray-600 mb-6 leading-relaxed font-body">
                 Transforming IT aspirants into job-ready professionals through hands-on mentoring and real-world experience.
               </p>
               
               <div className="space-y-3">
                 <div className="flex items-center text-gray-600">
                   <Mail className="w-4 h-4 mr-3 text-blue-600" />
-                  <span className="font-spectral">contact@aspirasys.com</span>
+                  <span className="font-body">contact@aspirasys.com</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Phone className="w-4 h-4 mr-3 text-blue-600" />
-                  <span className="font-spectral">+1 (555) 123-4567</span>
+                  <span className="font-body">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <MapPin className="w-4 h-4 mr-3 text-blue-600" />
-                  <span className="font-spectral">123 Tech Street, Innovation City</span>
+                  <span className="font-body">123 Tech Street, Innovation City</span>
                 </div>
               </div>
             </motion.div>
@@ -83,13 +83,13 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-lg font-semibold mb-4 font-spectral text-gray-800">Programs</h4>
+              <h4 className="text-lg font-semibold mb-4 font-title text-gray-800">Programs</h4>
               <ul className="space-y-2">
                 {programsLinks.map((link, index) => (
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-spectral"
+                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body"
                     >
                       {link}
                     </a>
@@ -107,13 +107,13 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-lg font-semibold mb-4 font-spectral text-gray-800">Company</h4>
+              <h4 className="text-lg font-semibold mb-4 font-title text-gray-800">Company</h4>
               <ul className="space-y-2">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-spectral"
+                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body"
                     >
                       {link}
                     </a>
@@ -131,13 +131,13 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="text-lg font-semibold mb-4 font-spectral text-gray-800">Support</h4>
+              <h4 className="text-lg font-semibold mb-4 font-title text-gray-800">Support</h4>
               <ul className="space-y-2">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-spectral"
+                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body"
                     >
                       {link}
                     </a>
@@ -156,7 +156,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-600 text-sm font-spectral mb-4 md:mb-0">
+          <p className="text-gray-600 text-sm font-body mb-4 md:mb-0">
             © 2025 AspiraSys. All rights reserved.
           </p>
           
