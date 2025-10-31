@@ -15,7 +15,7 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/Aspira-Sys" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/hire-from-us" element={<HireFromUs />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/internship-program/:programId" element={<InternshipProgram />} />

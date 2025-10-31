@@ -8,14 +8,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const isHomePage = location.pathname === '/Aspira-Sys' || location.pathname === '/';
+  const isHomePage = location.pathname === '/';
 
   const navigationItems = [
-    { name: 'Home', sectionId: 'hero', path: '/Aspira-Sys' },
-    { name: 'About Us', sectionId: 'about', path: '/Aspira-Sys' },
-    { name: 'Explore Internship', sectionId: 'internship-programs', path: '/Aspira-Sys' },
-    { name: 'Ecosystem', sectionId: 'ecosystem', path: '/Aspira-Sys' },
-    { name: 'FAQ', sectionId: 'faq', path: '/Aspira-Sys' },
+    { name: 'Home', sectionId: 'hero', path: '/' },
+    { name: 'About Us', sectionId: 'about', path: '/' },
+    { name: 'Explore Internship', sectionId: 'internship-programs', path: '/' },
+    { name: 'Ecosystem', sectionId: 'ecosystem', path: '/' },
+    { name: 'FAQ', sectionId: 'faq', path: '/' },
     { name: 'Hire from Us', path: '/hire-from-us' },
     { name: 'Resources', path: '/resources' },
   ];
@@ -35,7 +35,13 @@ const Navbar = () => {
       scrollToSection(item.sectionId);
     } else if (item.sectionId && !isHomePage) {
       // Navigate to home page and then scroll
-      window.location.href = `/Aspira-Sys#${item.sectionId}`;
+      navigate('/');
+      setTimeout(() => {
+        const section = document.getElementById(item.sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
     setIsMenuOpen(false);
   };
@@ -50,7 +56,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/Aspira-Sys">
+          <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex-shrink-0 flex items-center cursor-pointer"
