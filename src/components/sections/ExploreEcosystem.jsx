@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   Rocket, 
   FolderOpen, 
@@ -15,6 +16,8 @@ import {
 } from 'lucide-react';
 
 const ExploreEcosystem = () => {
+  const navigate = useNavigate();
+  
   const ecosystemItems = [
     {
       icon: FolderOpen,
@@ -48,9 +51,9 @@ const ExploreEcosystem = () => {
     },
     {
       icon: Users,
-      title: "Hire From Us",
+      title: "Resource",
       description: "Partner with us to recruit trained and experienced entry-level developers",
-      buttonText: "Hire Now",
+      buttonText: "Get Resources",
       color: "from-purple-500 to-violet-500",
       bgColor: "from-purple-50 to-violet-50",
       hoverColor: "hover:from-purple-600 hover:to-violet-600",
@@ -94,6 +97,13 @@ const ExploreEcosystem = () => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
+          onClick={() => {
+            if (item.buttonText === 'Get Resources') {
+              navigate('/resources');
+            } else if (item.buttonText === 'Watch Now') {
+              window.open('https://www.youtube.com/@AspiraSys/videos', '_blank');
+            }
+          }}
           className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group font-button"
         >
           <span>{item.buttonText}</span>
@@ -208,14 +218,16 @@ const ExploreEcosystem = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-slate-800 hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-button text-lg"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSesxuDBrxsq17OQyCWjj7BZ8exnl-uW57sClDLs8AN0vLV05w/viewform', '_blank')}
+                className="bg-white text-slate-800 hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl font-button text-lg cursor-pointer"
               >
                 Start Your Journey
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/20 font-semibold px-10 py-4 rounded-full transition-all duration-300 flex items-center justify-center space-x-3 font-button text-lg backdrop-blur-sm"
+                onClick={() => navigate('/contact')}
+                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/20 font-semibold px-10 py-4 rounded-full transition-all duration-300 flex items-center justify-center space-x-3 font-button text-lg backdrop-blur-sm cursor-pointer"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />

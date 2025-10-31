@@ -68,7 +68,7 @@ export default {
         'delius': ['Delius', 'cursive'],
         'opensans': ['Open Sans', 'sans-serif'],
         'quicksand': ['Quicksand', 'sans-serif'],
-        'title': ['Delius', 'cursive'],
+        'title': ['Quicksand', 'sans-serif'],
         'body': ['Open Sans', 'sans-serif'],
         'button': ['Quicksand', 'sans-serif'],
       },

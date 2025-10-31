@@ -1,16 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Linkedin, 
-  Twitter, 
-  Facebook, 
+  Youtube, 
   Instagram 
 } from 'lucide-react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  
   const programsLinks = [
     'Internship Program',
     'Training Program', 
@@ -34,8 +36,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/company/aspirasys/', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Youtube, href: 'https://www.youtube.com/@AspiraSys/videos', label: 'YouTube' },
     { icon: Instagram, href: 'https://www.instagram.com/aspirasysofficial/', label: 'Instagram' }
   ];
 
@@ -135,12 +136,28 @@ const Footer = () => {
               <ul className="space-y-2">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
-                    <a 
-                      href="#" 
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body"
-                    >
-                      {link}
-                    </a>
+                    {link === 'Contact' ? (
+                      <button 
+                        onClick={() => navigate('/contact')}
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body cursor-pointer"
+                      >
+                        {link}
+                      </button>
+                    ) : link === 'Hire From Us' ? (
+                      <button 
+                        onClick={() => navigate('/hire-from-us')}
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body cursor-pointer"
+                      >
+                        {link}
+                      </button>
+                    ) : (
+                      <a 
+                        href="#" 
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-body"
+                      >
+                        {link}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

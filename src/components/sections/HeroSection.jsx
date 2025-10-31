@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Play, Users, Building2, Award, HandHeart, ArrowUp } from 'lucide-react';
 import AnimatedText from '../ui/AnimatedText';
 import SimpleParticles from '../ui/simple-particles';
 
 const HeroSection = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const navigate = useNavigate();
 
   // Show/hide scroll to top button based on scroll position
   useEffect(() => {
@@ -149,7 +151,7 @@ const HeroSection = () => {
                       } else if (button.text === 'View Intern Projects') {
                         scrollToSection('explore-ecosystem');
                       } else if (button.text === 'Hire From Us') {
-                        scrollToSection('about-us');
+                        navigate('/hire-from-us');
                       }
                     }}
                     className={`

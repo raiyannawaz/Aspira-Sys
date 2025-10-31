@@ -1,25 +1,26 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import HeroSection from './components/sections/HeroSection';
-import OffersSection from './components/sections/OffersSection';
-import AboutUsSection from './components/sections/AboutUsSection';
-import InternshipPrograms from './components/sections/InternshipPrograms';
-import ExploreEcosystem from './components/sections/ExploreEcosystem';
-import FAQSection from './components/sections/FAQSection';
+import ScrollToTop from './components/ui/ScrollToTop';
+import HomePage from './pages/HomePage';
+import HireFromUs from './pages/HireFromUs';
+import Resources from './pages/Resources';
+import InternshipProgram from './pages/InternshipProgram';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <div className="min-h-screen bg-white font-body overflow-x-hidden">
+      <ScrollToTop />
       <Navbar />
-      <main>
-        <HeroSection />
-        <OffersSection />
-        <AboutUsSection />
-        <InternshipPrograms />
-        <ExploreEcosystem />
-        <FAQSection />
-      </main>
+      <Routes>
+        <Route path="/Aspira-Sys" element={<HomePage />} />
+        <Route path="/hire-from-us" element={<HireFromUs />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/internship-program/:programId" element={<InternshipProgram />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   GraduationCap, 
   Globe, 
@@ -17,8 +18,11 @@ import {
 } from 'lucide-react';
 
 const InternshipPrograms = () => {
+  const navigate = useNavigate();
+  
   const oneMonthPrograms = [
     {
+      id: "ai-web-creation",
       icon: Globe,
       title: "AI-Powered Web Creation & Portfolio Launchpad",
       description: "Build stunning websites, master AI tools, and launch your digital identity in just 30 days.",
@@ -26,6 +30,7 @@ const InternshipPrograms = () => {
       bgColor: "from-blue-50 to-cyan-50"
     },
     {
+      id: "creative-tech-design",
       icon: Palette,
       title: "Creative Tech Intern: Design & Media with AI",
       description: "Master Canva, create pro visuals, and explore AI video/image/music generation hands-on.",
@@ -33,6 +38,7 @@ const InternshipPrograms = () => {
       bgColor: "from-purple-50 to-pink-50"
     },
     {
+      id: "agentic-ai-specialist",
       icon: Bot,
       title: "Agentic AI Specialist Internship",
       description: "Learn how to automate workflows, build smart AI agents, and work with emerging agent frameworks.",
@@ -40,6 +46,7 @@ const InternshipPrograms = () => {
       bgColor: "from-green-50 to-emerald-50"
     },
     {
+      id: "youtube-content-creator",
       icon: Video,
       title: "AI-Driven YouTube Content Creator Internship",
       description: "Script, design, and publish short-form content using AI avatars, editors, and growth strategies.",
@@ -50,6 +57,7 @@ const InternshipPrograms = () => {
 
   const fourMonthPrograms = [
     {
+      id: "fullstack-developer",
       icon: Code,
       title: "Full Stack Developer Internship with AI Co-Pilots",
       description: "Master modern web stacks and build full-fledged apps using Copilot, Claude, and Cursor.",
@@ -57,6 +65,7 @@ const InternshipPrograms = () => {
       bgColor: "from-slate-50 to-blue-50"
     },
     {
+      id: "data-science-ml",
       icon: Database,
       title: "AI-Powered Data Science & Machine Learning Internship",
       description: "Go from Python beginner to ML project creator using real-world datasets and AI-assisted coding.",
@@ -64,6 +73,7 @@ const InternshipPrograms = () => {
       bgColor: "from-indigo-50 to-purple-50"
     },
     {
+      id: "business-analyst",
       icon: BarChart3,
       title: "Business Analyst Internship: AI + UX + Strategy",
       description: "Learn analysis, automation, and research tools to become a well-rounded business thinker.",
@@ -71,6 +81,7 @@ const InternshipPrograms = () => {
       bgColor: "from-teal-50 to-green-50"
     },
     {
+      id: "digital-marketing",
       icon: TrendingUp,
       title: "Digital Marketing & Growth Strategy Internship with AI",
       description: "Create full-funnel campaigns, automate tasks, and launch a job-ready portfolio using AI tools.",
@@ -79,7 +90,7 @@ const InternshipPrograms = () => {
     }
   ];
 
-  const ProgramCard = ({ program, duration, index, isLongTerm = false }) => (
+  const ProgramCard = ({ program, duration, index, isLongTerm = false, navigate }) => (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -123,12 +134,18 @@ const InternshipPrograms = () => {
 
       {/* Action Buttons */}
       <div className="mt-6 flex items-center justify-between">
-        <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-          Learn More
-        </span>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => navigate(`/internship-program/${program.id}`)}
+          className="text-xs font-medium text-indigo-600 hover:text-indigo-700 uppercase tracking-wide transition-colors duration-300 cursor-pointer"
+        >
+          Learn More
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSesxuDBrxsq17OQyCWjj7BZ8exnl-uW57sClDLs8AN0vLV05w/viewform', '_blank')}
           className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-md font-button"
         >
           Apply Now
@@ -183,6 +200,7 @@ const InternshipPrograms = () => {
                 duration="1 Month"
                 index={index}
                 isLongTerm={false}
+                navigate={navigate}
               />
             ))}
           </div>
@@ -212,6 +230,7 @@ const InternshipPrograms = () => {
                 duration="4 Months"
                 index={index}
                 isLongTerm={true}
+                navigate={navigate}
               />
             ))}
           </div>
